@@ -1,0 +1,243 @@
+/* ---------- FONTS ---------- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+/* ---------- RESETS ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 18px;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- CUSTOM PROPERTIES ---------- */
+:root {
+  --soft-red: hsl(10, 79%, 65%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+
+  --white: hsl(44, 0%, 100%);
+  --black: hsl(44, 0%, 0%);
+}
+
+/* ---------- STYLINGS ---------- */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM sans', sans-serif;
+  background-color: var(--cream);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-section {
+  width: 22rem;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+/* --- upper section --- */
+.upper-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  background-color: var(--soft-red);
+}
+
+.upper-section__wrapper {
+  color: var(--very-pale-orange);
+}
+
+.upper-section__title {
+  margin-bottom: .3rem;
+  font-size: .7rem;
+  font-weight: 100;
+}
+
+.upper-section__balance {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* --- logo --- */
+.upper-section__logo-wrapper {
+  position: relative;
+  padding-right: 1rem;
+}
+
+.upper-section__logo-element {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 25px;
+}
+
+.logo-element--primary {
+  border: 1px solid var(--black);
+  background-color: var(--black);
+}
+
+.logo-element--secondary {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  border: 1px solid var(--white);
+  background-color: transparent;
+}
+
+/* --- main section --- */
+.main-section {
+  background-color: var(--very-pale-orange);
+}
+
+.main-section__header{
+  margin: .5rem 0;
+  font-size: 1.3rem;
+}
+
+.main-section__chart {
+  display: flex; 
+  align-items: flex-end;
+  justify-content: center;
+  height: 10.5rem;
+  padding-inline-start: 0;
+  padding-bottom: 1.5rem;
+  margin-top: 1rem;
+  list-style-type: none;
+}
+
+.main-section__chart-element:not(:first-of-type) {
+  margin: 0 0 0 .4rem;
+}
+
+.main-section__chart-bar-wrapper {
+  width: 2.6rem;
+}
+
+.main-section__chart-bar-wrapper:hover .main-section__chart-amount {
+  display: block;
+}
+
+.main-section__chart-amount {
+  display: none;
+  padding: .3rem .4rem;
+  border-radius: 5px;
+  margin-bottom: .2rem;
+  font-size: .6rem;
+  color: var(--very-pale-orange);
+  background-color: var(--dark-brown);
+}
+
+.main-section__chart-bar {
+  width: 2rem;
+  border-radius: 5px;
+  margin: auto;
+  background-color: var(--soft-red);
+}
+
+.main-section__chart-bar:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.main-section__chart-paragraph {
+  text-align: center;
+  font-size: .6rem;
+  font-weight: 100;
+}
+
+.main-section__data {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--medium-brown);
+}
+
+.main-section__data-paragraph {
+  font-size: .7rem;
+  font-weight: 100;
+}
+
+.data-paragraph--primary {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.data-paragraph--secondary {
+  text-align: right;
+  font-weight: 900;
+}
+
+/* --- active state--- */
+.active {
+  background-color: var(--cyan);
+}
+
+/* --- media --- */ 
+@media(max-width:480px) {
+
+  main {
+    width: 90%;
+  }
+
+  .block-section {
+    width: 100%;
+  }
+
+  .main-section {
+    height: 21rem;
+  }
+
+  .main-section__chart-bar-wrapper {
+    width: 2rem;
+  }
+
+  .main-section__chart-amount {
+    padding: .2rem .1rem;
+  }
+
+  .main-section__chart-bar {
+    width: 1.8rem;
+  }
+
+  .main-section__chart-element:not(:first-of-type) {
+    margin: 0 0 0 .5rem;
+  }
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js"></script>
+  <title>Expenses chart component</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <!-- upper section -->
+      <section class="upper-section block-section">
+        <div class="upper-section__wrapper">
+          <p class="upper-section__title">My balance</p>
+          <p class="upper-section__balance">$921.48</p>
+        </div>
+        <div class="upper-section__logo-wrapper">
+          <div class="upper-section__logo-element logo-element--primary"></div>
+          <div class="upper-section__logo-element logo-element--secondary"></div>
+        </div>
+      </section>
+      <!-- lower section -->
+      <section class="main-section block-section">
+        <h1 class="main-section__header">Spending - Last 7 days</h1>
+        <div class="wrapper">
+          <ul class="main-section__chart" id="ul"> 
+          <!--
+            <li class="main-section__chart-element">
+              <div class="main-section__chart-bar-wrapper">
+                <div class="main-section__chart-amount ">$52.36</div>
+                <div class="main-section__chart-bar"></div>
+                <p class="main-section__chart-paragraph">mon</p>
+              </div>
+            </li>
+          -->
+          </ul>
+        </div>
+        <div class="main-section__data">
+          <div class="wrapper">
+            <p class="main-section__data-paragraph">Total this month</p>
+            <p class="main-section__data-paragraph data-paragraph--primary">$478.33</p>
+          </div>
+          <div class="wrapper">
+            <p class="main-section__data-paragraph data-paragraph--secondary">+2.4%</p>
+            <p class="main-section__data-paragraph">from last month</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
